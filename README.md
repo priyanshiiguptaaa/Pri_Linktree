@@ -17,9 +17,3 @@ Check out the live deployment here: [Pri_Linktree](https://pri-linktree.vercel.a
 - Smooth hover effects
 - Social media links
 - Profile information
-
-## 🚀 Deployment
-The project is deployed using Vercel and can be accessed at: https://pri-linktree.vercel.app/
-
-## 📝 License
-This project is open source and available under the [MIT License](LICENSE).

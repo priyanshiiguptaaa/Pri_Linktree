@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priyanshi Gupta • Links</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="Priyanshi Gupta .jpg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #e6d5c3 0%, #d4b499 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #4a3728;
+        }
+
+        .container {
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 30px;
+            padding: 40px 25px;
+            box-shadow: 0 10px 30px rgba(212, 180, 153, 0.3);
+            animation: fadeIn 1s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 120px;
+            background: linear-gradient(135deg, #d4b499, #c19a6b);
+            border-radius: 30px 30px 50% 50%;
+            z-index: 0;
+            opacity: 0.3;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .profile-section {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 35px;
+        }
+
+        .logo-container {
+            width: 150px;
+            height: 150px;
+            margin: -20px auto 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo-decoration {
+            position: absolute;
+            inset: -12px;
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .logo-decoration::before,
+        .logo-decoration::after {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: #c19a6b;
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .logo-decoration::before {
+            top: 20%;
+            left: 0;
+            animation-delay: -0.5s;
+        }
+
+        .logo-decoration::after {
+            bottom: 20%;
+            right: 0;
+            animation-delay: -1s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(5px, -5px); }
+        }
+
+        .logo-bg {
+            position: absolute;
+            inset: -8px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #d4b499, #c19a6b, #e6d5c3);
+            animation: rotate 4s linear infinite;
+            filter: blur(4px);
+        }
+
+        .logo-frame {
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+        }
+
+        .logo {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 5px 15px rgba(212, 180, 153, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+
+        .name {
+            color: #4a3728;
+            font-size: 26px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .bio {
+            color: #6b5442;
+            font-size: 15px;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 15px 0 25px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(212, 180, 153, 0.1);
+            border: 2px solid #e6d5c3;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-3px);
+            background: rgba(212, 180, 153, 0.2);
+            border-color: #d4b499;
+            box-shadow: 0 5px 15px rgba(212, 180, 153, 0.2);
+        }
+
+        .social-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: #c19a6b;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover svg {
+            stroke: #4a3728;
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            text-decoration: none;
+            border-radius: 18px;
+            background: white;
+            border: 2px solid #e6d5c3;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .link:hover {
+            transform: translateY(-3px);
+            border-color: #d4b499;
+            background: linear-gradient(to right, rgba(212, 180, 153, 0.1), rgba(193, 154, 107, 0.1));
+            box-shadow: 0 5px 15px rgba(212, 180, 153, 0.2);
+        }
+
+        .link:active {
+            transform: translateY(0);
+        }
+
+        .link-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 15px;
+            position: relative;
+            z-index: 2;
+            transition: transform 0.3s ease;
+            color: #c19a6b;
+        }
+
+        .link:hover .link-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .link-text {
+            color: #4a3728;
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .arrow {
+            margin-left: auto;
+            width: 20px;
+            height: 20px;
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .link:hover .arrow {
+            opacity: 0.7;
+            transform: translateX(0);
+        }
+
+        .footer {
+            margin-top: 35px;
+            color: #6b5442;
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        .footer span {
+            color: #c19a6b;
+            font-size: 16px;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-section">
+            <div class="logo-container">
+                <div class="logo-bg"></div>
+                <div class="logo-frame"></div>
+                <img src="Priyanshi Gupta .jpg" alt="Priyanshi Gupta" class="logo">
+            </div>
+            <h1 class="name">Priyanshi Gupta</h1>
+            <p class="bio">Developer & Tech Enthusiast ✨</p>
+
+            <div class="social-icons">
+                <a href="https://twitter.com/priyanshiiguptaa" class="social-icon" target="_blank" title="Twitter">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/priyanshii3101/" class="social-icon" target="_blank" title="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="mailto:priyanshigupta6718@gmail.com" class="social-icon" target="_blank" title="Email">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </a>
+                <a href="https://wa.me/919811270326" class="social-icon" target="_blank" title="WhatsApp">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="links-container">
+            <a href="https://github.com/priyanshiiguptaaa" class="link" target="_blank">
+                <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="#2d2d2d" stroke-width="2">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                <span class="link-text">GitHub</span>
+                <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="#2d2d2d" stroke-width="2">
+                    <path d="M7 17l9.2-9.2M17 17V8H8"></path>
+                </svg>
+            </a>
+
+            <a href="https://leetcode.com/u/priyanshigupta6718/" class="link" target="_blank">
+                <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="#2d2d2d" stroke-width="2">
+                    <path d="M16 8.5l-8 7.5 8 7.5v-15z"></path>
+                    <path d="M8 8.5l8 7.5-8 7.5v-15z"></path>
+                </svg>
+                <span class="link-text">LeetCode</span>
+                <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="#2d2d2d" stroke-width="2">
+                    <path d="M7 17l9.2-9.2M17 17V8H8"></path>
+                </svg>
+            </a>
+
+            <a href="https://www.linkedin.com/in/priyanshiguptaa/" class="link" target="_blank">
+                <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="#2d2d2d" stroke-width="2">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+                <span class="link-text">LinkedIn</span>
+                <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="#2d2d2d" stroke-width="2">
+                    <path d="M7 17l9.2-9.2M17 17V8H8"></path>
+                </svg>
+            </a>
+
+            <a href="https://priyanshi-gupta.vercel.app/" class="link" target="_blank">
+                <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="#2d2d2d" stroke-width="2">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                    <path d="M12 8l-4 4h3v4h2v-4h3l-4-4z"/>
+                </svg>
+                <span class="link-text">Portfolio Website</span>
+                <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="#2d2d2d" stroke-width="2">
+                    <path d="M7 17l9.2-9.2M17 17V8H8"></path>
+                </svg>
+            </a>
+
+            <a href="https://www.youtube.com/@PriyanshiiGuptaa" class="link" target="_blank">
+                <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="#2d2d2d" stroke-width="2">
+                    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                </svg>
+                <span class="link-text">YouTube</span>
+                <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="#2d2d2d" stroke-width="2">
+                    <path d="M7 17l9.2-9.2M17 17V8H8"></path>
+                </svg>
+            </a>
+
+            <a href="https://www.kaggle.com/priyanshiguptaa" class="link" target="_blank">
+                <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="#2d2d2d" stroke-width="2">
+                    <path d="M12 12.5c1.4-1.4 2.8-2.9 4.2-4.3c.5-.5.9-1 1.3-1.6c.2-.3.2-.8-.1-1.1c-.4-.4-.9-.4-1.3-.1c-.6.4-1.1.9-1.6 1.3c-1.4 1.4-2.9 2.8-4.3 4.2c-.1.1-.1.1-.2 0C8.7 9.6 7.3 8.2 5.9 6.8c-.5-.4-1-.9-1.4-1.3c-.3-.3-.8-.3-1.2 0c-.4.3-.4.8-.1 1.1c.4.5.8 1 1.3 1.4c1.4 1.4 2.8 2.8 4.2 4.2c.1.1.1.1 0 .2c-1.4 1.4-2.8 2.8-4.2 4.2c-.5.5-1 .9-1.4 1.3c-.3.3-.3.8 0 1.2c.3.4.8.4 1.1.1c.5-.4 1-.8 1.4-1.3c1.4-1.4 2.8-2.8 4.2-4.2c.1-.1.1-.1.2 0c1.4 1.4 2.8 2.8 4.2 4.2c.5.5.9 1 1.4 1.4c.3.3.8.3 1.2 0c.4-.3.4-.8.1-1.1c-.4-.5-.8-1-1.3-1.4c-1.4-1.4-2.8-2.8-4.2-4.2C12.1 12.6 12.1 12.6 12 12.5z"/>
+                </svg>
+                <span class="link-text">Kaggle</span>
+                <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="#2d2d2d" stroke-width="2">
+                    <path d="M7 17l9.2-9.2M17 17V8H8"></path>
+                </svg>
+            </a>
+        </div>
+
+        <div class="footer">
+            Made with <span>♥</span> by Pri
+        </div>
+    </div>
+</body>
+</html>
